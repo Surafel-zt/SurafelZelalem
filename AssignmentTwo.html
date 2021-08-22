@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Assignment Two</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #assignment2-btn {
+            background: rgb(255, 255, 255);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-btn-container">
+        <a href="Index.html"><button class="navigation" id="home-btn">Home</button></a>
+    </div>
+    <div class="assignment-btn-container">
+        <button class="navigation" onclick='return viewassignments()'>Assignments</button>
+        <div class="assignments-container" id="assignments-container" style="display: none;">
+            <div class="assignment">
+                <a href="AssignmentOne.html"><button class="navigation" id="assignment1-btn">Assignment One</button></a>
+            </div>
+            <div class="assignment">
+                <a href="AssignmentTwo.html"><button class="navigation" id="assignment2-btn">Assignment Two</button></a>
+            </div>
+        </div>
+    </div>
+    <h3>GUI Project 1</h3>
+    <div class="function-btn-container">
+        <div class="function-btn">
+            <a href="Calculator GUI.py"><button>Download script</button></a>
+        </div>
+        <div class="function-btn">
+            <a href="Calculator GUI.zip"><button>Download .zip file</button></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+</footer>
+
+</html>

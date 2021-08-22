@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #home-btn {
+            background: rgb(255, 255, 255);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-btn-container">
+        <a href="Index.html"><button class="navigation" id="home-btn">Home</button></a>
+    </div>
+    <div class="assignment-btn-container">
+        <button class="navigation" onclick='return viewassignments()'>Assignments</button>
+        <div class="assignments-container" id="assignments-container" style="display: none;">
+            <div class="assignment">
+                <a href="AssignmentOne.html"><button class="navigation" id="assignment1-btn">Assignment One</button></a>
+            </div>
+            <div class="assignment">
+                <a href="AssignemntTwo.html"><button class="navigation" id="assignment2-btn">Assignment Two</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text">
+        <div class="info">
+            <h3>About</h3> 
+                <p>Surafel Zelalem 
+                    ETR/8571/10 <hr>
+                    First Html and Css Assignment
+                </p>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+<footer>
+</footer>
+
+</html>
