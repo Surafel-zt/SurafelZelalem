@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="constyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content-container">
+        <nav>
+            <div class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="374" height="188" viewBox="0 0 374 188">
+                    <defs>
+                      <filter id="Surafel" x="0" y="0" width="374" height="188" filterUnits="userSpaceOnUse">
+                        <feOffset dy="3" input="SourceAlpha"/>
+                        <feGaussianBlur stdDeviation="3" result="blur"/>
+                        <feFlood flood-opacity="0.161"/>
+                        <feComposite operator="in" in2="blur"/>
+                        <feComposite in="SourceGraphic"/>
+                      </filter>
+                    </defs>
+                    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Surafel)">
+                      <text id="Surafel-2" data-name="Surafel" transform="translate(9 134)" fill="#FD4C5E" font-size="100" font-family="StickNoBills-Regular, Stick No Bills"><tspan x="0" y="0">Surafel</tspan></text>
+                    </g>
+                  </svg>
+
+            </div>
+            <div class="nav-btn-container">
+                <ul type="none">
+                    <li><a href="index.html"><button class="nav-btn">Home</button></a></li>
+                    <li><a href="about.html"><button class="nav-btn">About</button></a></li>
+                    <li><a href="cotactus.html"><button class="nav-btn">Contact</button></a></li>
+                    <li class="show-ass"><button class="nav-btn" id="ass-btn">Assignment</button>
+                        <div id="assignment-content">
+                            <a href="assignmentone.html"><button>Assignment One</button></a></br>
+                            <a href="assignmenttwo.html"><button>Assignment Two</button></a></br>
+                            <a href="assignmentthree.html"><button>Assignment Three</button></a></br>
+                            <a href="assignmentfour.html"><button>Assignment Four</button></a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="content" id="content">
+            <h2>Contact Us</h2>
+            <form action="https://formsubmit.co/surafelzelalemt@gmail.com" method="POST">
+            <div class="email-container">
+                <div class="input-container">
+                    <input type="email" name="email" id="email" class="input email" placeholder="Email" autocomplete="" required>
+                </div>
+                <div class="input-container">
+                    <textarea name="message" id="" cols="30" rows="7" class="input textarea" placeholder="Message" Required></textarea>
+                </div>
+                <div class="input-container">
+                    <button class="send-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" fill="#EEF4FC">
+                    <path d="M6 3 A 2 2 0 0 0 4 5L4 11 A 2 2 0 0 0 5.3398438 12.884766 A 2 2 0 0 0 6 13 A 2 2 0 0 0 6.0214844 13L18 15L6.0214844 17.001953 A 2 2 0 0 0 6 17 A 2 2 0 0 0 5.3378906 17.115234 A 2 2 0 0 0 4 19L4 25 A 2 2 0 0 0 6 27 A 2 2 0 0 0 6.9921875 26.734375L6.9941406 26.734375L27.390625 15.921875L27.392578 15.917969 A 1 1 0 0 0 28 15 A 1 1 0 0 0 27.390625 14.078125L6.9941406 3.265625 A 2 2 0 0 0 6 3 z" fill="#EEF4FC" />
+                  </svg>&nbsp;&nbsp;Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Surafel Zelalem</h2>
+            <h3>Subscribe</h3>
+            <div class="email-container">
+                <div class="input-container">
+                    <input type="email" name="email" id="email" class="input email" placeholder="Email" required>
+                </div>
+                <div class="input-container">
+                    <button class="send-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="email-container">
+                <div class="input-container">
+                    <input type="text" name="fname" id="fname" class="input fname" placeholder="First Name" required>
+                    <input type="text" name="lname" id="lname" class="input lname" placeholder="Last Name" required>
+                </div>
+                <div class="input-container">
+                    <pre>How many times have you taken the course before? &nbsp;<select name="number" class="select" id="number">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="More">More</option>
+                    </select></pre>
+                </div>
+                <div class="input-container">
+                    <h4>Get updates?</h4>
+                    <input type="radio" name="radio" id="radio" class="input radio" value="Yes" checked>Yes
+                    <input type="radio" name="radio" id="radio" class="input radio" value="No">No
+                </div>
+                <div class="input-container">
+                    <h4>What's interesting about the course?</h4>
+                    <input type="checkbox" name="check" id="check" class="input check" placeholder="">Lectures
+                    <input type="checkbox" name="check" id="check" class="input check" placeholder="">Laboratory
+                    <input type="checkbox" name="check" id="check" class="input check" placeholder="">Workshop
+                    <input type="checkbox" name="check" id="check" class="input check" placeholder="">Assignment
+                </div>
+                <div class="input-container">
+                    <h3>Feedback</h3>
+                    <textarea name="feedback" id="" cols="30" rows="5" class="input textarea" placeholder="Feedback"></textarea>
+                </div>
+                <div class="input-container">
+                    <h4>Select courses you are taking this semester</h3>
+                        <select name="course" class="input multiple" size="4" multiple="multiple">
+                            <option value="Architectural Design 1">Architcetural Design 1</option> 
+                            <option value="Professional Computer Aided Design 1">Computer Aided Design 1</option>
+                            <option value="Architectural Design 2">Architcetural Design 2</option> 
+                            <option value="Professional Computer Aided Design 2">Computer Aided Design 2</option>
+                            </select>
+                </div>
+                <div class="input-container">
+                    <h4>Attach course support file (optional)</h4>
+                    <input type="file" name="file" id="file" class="input file">
+                </div>
+                <div class="input-container">
+                    <button class="send-btn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26 26" fill="#EEF4FC">
+                        <path d="M22.566406 4.730469L20.773438 3.511719C20.277344 3.175781 19.597656 3.304688 19.265625 3.796875L10.476563 16.757813L6.4375 12.71875C6.015625 12.296875 5.328125 12.296875 4.90625 12.71875L3.371094 14.253906C2.949219 14.675781 2.949219 15.363281 3.371094 15.789063L9.582031 22C9.929688 22.347656 10.476563 22.613281 10.96875 22.613281C11.460938 22.613281 11.957031 22.304688 12.277344 21.839844L22.855469 6.234375C23.191406 5.742188 23.0625 5.066406 22.566406 4.730469Z" fill="#EEF4FC" />
+                        </svg>&nbsp;Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,102 +1,555 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
-    font-family: sans-serif,Arial, Helvetica, sans-serif;
-    transition: all 0.6s ease;
+    transition: all ease-in-out 250ms;
 }
 
 body {
-    display: flex;
-    justify-content: spac-around;
+    text-align: center;
     align-items: center;
-    font-family: sans-serif;
-    background-image: url(Images/bg.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-family: 'Helvatica', sans-serif;
+    background-color: white;
+    overflow-x: hidden;
 }
 
-.home-btn-container {
-    position: absolute;
-    top: 50px;
-    left: 50px;
+button {
+    cursor: pointer;
 }
 
-.assignment-btn-container {
-    position: absolute;
-    top: 50px;
-    right: 50px;
+::-webkit-scrollbar {
+    Width: 8px;
+    background: rgba(255, 255, 255, 0);
 }
 
-.assignment {
-    padding: 5px;
+ ::-webkit-scrollbar-track {
+    background: rgba(139, 139, 139, 0);
 }
 
-.navigation {
-    width: 195px;
-    height: 35px;
-    border: 1px solid rgb(255, 255, 255);
-    background: none;
+ ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    color: aquamarine;
+    width: 5px;
+    background: #848BA7;
 }
 
-.navigation:hover {
-    background: rgb(255, 255, 255);
-    color: black;
+h1 {
+    font-size: 5em;
+    font: Times New Roman PS Pro Bold;
+    font-weight: bolder;
+    color: #373B44;
+}
+
+h2 {
+    padding-top: 1.5em;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #373B44;
 }
 
 h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 250px;
-    left: 430px;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #373B44;
 }
 
-.function-btn-container {
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    color: #373B44;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: white;
+    z-index: 1;
+}
+
+.logo-container {
+    padding-top: 25px;
+    padding-left: 25px;
+    width: fit-content;
+    height: fit-content;
+    background: none;
+}
+
+.logo-container svg {
+    width: 150px;
+    height: 300px;
     position: relative;
-    left: 200px;
-    top: 500px;
+    bottom: 110px;
+}
+
+.nav-btn-container {
+    padding-top: 2em;
+}
+
+.nav-btn-container ul {
     display: flex;
     flex-direction: row;
 }
 
-.function-btn button {
-    width: 160px;
-    height: 45px;
+.nav-btn {
+    width: 10em;
+    height: 3em;
+    font-family: 'Josefin Sans', sans-serif;
     border: none;
-    border-radius: 15px;
-    background: rgb(194, 128, 4);
-    font-size: 12px;
-    color: rgb(255, 255, 255);
-    margin-left: 65%;
+    transform-origin: left;
+    background: none;
+    color: #848BA7;
+    transition: all ease-in-out 100ms;
 }
 
-.function-btn button:hover {
-    background: rgb(99, 129, 184);
-    color: rgb(0, 0, 0);
-    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.253);
+.nav-btn:hover {
+    border-bottom: 5px solid #FD4C5E;
+    color: #373B44;
 }
 
-.function-btn {
-    padding: 9px;
-}
-
-#assignment1-btn a{
-    position: relative;
-    padding-left: 20%;
-}
-
-.text {
-    display: flex;
-    margin-top: 15%;
-    margin-left: 20%;
-    height: 88%;
+#assignment-content {
+    display: none;
+    background-image: -webkit-linear-gradient(180deg, rgb(101, 177, 221), rgb(100, 172, 214));
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: fixed;
     align-items: center;
+    right: 0;
+    top: 5.5em;
+    z-index: 1;
 }
 
-.info{
-    flex-basis: 50%;
-    width: 500px;
+.nav-btn-container ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-btn-container li {
+    float: left;
+}
+
+.nav-btn-container .show-ass a,
+#ass-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#assignment-content a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+#assignment-content button {
+    width: 10em;
+    height: 2.5em;
+    background: none;
+    border: none;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+#assignment-content a {
+    text-decoration: none;
+    display: block;
+}
+
+li.show-ass {
+    display: inline-block;
+}
+
+#assignment-content button:hover {
+    width: 10em;
+    height: 2.5em;
+    background-color: antiquewhite;
+    border: none;
+    color: rgb(94, 105, 102);
+}
+
+.show-ass:hover #assignment-content {
+    display: block;
+}
+
+
+/* ----------------------------------Index----------------------------- */
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr 1.5fr;
+    grid-template-areas: "main main main main" "about about about about" "skills skills skills skills";
+    grid-gap: 0.5em;
+    padding-top: 5em;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px rgb(122, 114, 114);
+    box-shadow: 0 0 10px rgb(119, 112, 112);
+}
+
+.main {
+    padding-top: 4.5em;
+    padding-bottom: 8.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: main;
+    overflow-x: hidden;
+}
+
+.main-content {
+    padding-left: 3em;
+    text-align: left;
+    margin-top: 3em;
+    width: 47%;
+    height: fit-content;
+}
+
+.main-image {
+    margin-top: 1.7em;
+    padding: 0;
+    width: 47%;
+    height: fit-content;
+}
+
+.info-read-btn {
+    width: 160px;
+    height: 50px;
+    border: none;
+    background-color: #FD4C5E;
+    color: antiquewhite;
+}
+
+.info-read-btn:hover {
+    background-color: #4819c8;
+}
+
+.main-image svg {
+    width: 100%;
+    fill: rgb(100, 172, 214);
+}
+
+.about-me {
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 10em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    grid-area: about;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(79, 97, 128);
+}
+
+.portrait {
+    width: 9em;
+    height: 9em;
+    border: 10px solid rgb(100, 172, 214);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about-me-content {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.social-btn {
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    transition: all ease-in-out 50ms;
+}
+
+.social-btn svg {
+    width: 35px;
+    fill: rgb(183, 193, 223);
+}
+
+.social-btn svg:hover {
+    fill: rgb(255, 255, 255);
+}
+
+.social-btn ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me h1,
+h3 {
+    font-size:medium;
+    color: #848BA7;
+}
+
+.skills h1, h3 {
+    padding-top: 0.1em;
+}
+.about-me h3 {
+    padding-top: 2.5em;
+    font-size: 25px;
+}
+
+.skills {
+    position: relative;
+    bottom: 15.55em;
+    padding-bottom: 0;
+    width: 80%;
+    padding-top: 1em;
+    padding-left: 14em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    grid-area: skills;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.skills-child-wrapper {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skills-child {
+    margin-left: 2em;
+    margin-right: 2em;
+    width: 230px;
+    height: 250px;
+    padding: 2em;
+    border-radius: 20px;
+    background-color: rgb(6, 248, 147);
+    box-shadow: 5px 25px 10px 10px rgb(165, 160, 160);
+}
+
+.skills h3 {
+    color: #454253;
+}
+
+.circle-head {
+    position: relative;
+    bottom: 333px;
+    left: 30%;
+    overflow-x: hidden;
+    border-radius: 50%;
+    width: 80px;
+}
+
+
+
+.more {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    color: aliceblue;
+    background-color: blueviolet;
+}
+
+.more:hover {
+    background-color: rgb(172, 120, 221);
+}
+
+.assignment-content-container {
+    width: 95%;
+    height: calc(100vh - 8em);
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7em;
+    -webkit-box-shadow: 0 0 10px rgb(122, 114, 114);
+    box-shadow: 0 0 10px rgb(119, 112, 112);
+    overflow: hidden;
+}
+
+.main-assignment {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.assignment-content {
+    width: 47%;
+    padding: 2em;
+}
+
+.assignment-image {
+    width: 47%;
+}
+
+.assignment-image svg {
+    width: 100%;
+    fill: rgb(100, 172, 214);
+}
+
+.text-container {
+    border: 1px solid black;
+}
+
+.btn-container {
+    padding: 1em;
+}
+
+.btn-container button {
+    margin-top: 1em;
+    width: 200px;
+    height: 3em;
+}
+
+@media only screen and (max-width: 1800px) {
+    .logo-container {
+        display: none;
+    }
+    h1 {
+        font-size: 2em;
+        font-weight: bolder;
+        color: rgb(100, 127, 214);
+    }
+    h2 {
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: rgb(100, 117, 214);
+    }
+    .about-me h3 {
+        font-size: 20px;
+        font-weight: bolder;
+        color: rgb(55, 68, 78);
+    }
+    h4 {
+        font-size: 0.3em;
+        font-weight: bold;
+        color: rgb(55, 68, 78);
+    }
+    nav {
+        height: 6em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-image: white;
+        z-index: 1;
+    }
+    .content-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    .content-container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.25fr 3fr;
+        grid-template-areas: "main main main main" "about about about about" "skills skills skills skills";
+        grid-gap: 0.5em;
+        padding-top: 5em;
+        background-color: white;
+        -webkit-box-shadow: 0 0 10px rgb(122, 114, 114);
+        box-shadow: 0 0 10px rgb(119, 112, 112);
+    }
+    .main {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        grid-area: main;
+    }
+    .main-content {
+        padding: 3em;
+        text-align: left;
+        margin-top: 3em;
+        width: 85%;
+        height: fit-content;
+    }
+    .main-content h3 {
+        font-size: 25px;
+    }
+    .main-image {
+        display: none;
+    }
+    .info-read-btn {
+        width: 160px;
+        height: 50px;
+        border: none;
+        background-color: blueviolet;
+        color: antiquewhite;
+    }
+    .info-read-btn:hover {
+        background-color: rgb(157, 81, 228);
+    }
+    .main-image svg {
+        width: 110%;
+        fill: rgb(100, 172, 214);
+    }
+    .about-me {
+        width: 100%;
+        padding-top: 1em;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        grid-area: about;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: rgb(79, 97, 128);
+    }
+    .portrait {
+        width: 9em;
+        height: 9em;
+        border: 10px solid rgb(100, 172, 214);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .skills {
+        position: relative;
+        top: 0;
+    }
+    .skills-child-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .skills-child {
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+    .skills-child h4 {
+        font-size: 15px;
+    }
+    .circle-head {
+        width: 60px;
+        position: relative;
+        left: 4.6em;
+        bottom: 16.2em;
+    }
 }

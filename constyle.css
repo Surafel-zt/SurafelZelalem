@@ -1,0 +1,370 @@
+* {
+    transition: all ease-in-out 250ms;
+}
+
+body {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(167, 210, 245);
+}
+
+::-webkit-scrollbar {
+    Width: 8px;
+    background: rgba(255, 255, 255, 0);
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgba(139, 139, 139, 0);
+}
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 5px;
+    background: #9b92ca;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: rgb(167, 210, 245);
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(167, 210, 245);
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(55, 68, 78);
+}
+
+pre {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(55, 68, 78);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.content-container {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 2px 5px 2px rgb(148, 145, 145);
+}
+
+.logo-container {
+    padding-top: 25px;
+    padding-left: 25px;
+    width: fit-content;
+    height: fit-content;
+    background: none;
+}
+
+.logo-container svg {
+    width: 150px;
+    height: 300px;
+    position: relative;
+    bottom: 110px;
+}
+
+.nav-btn-container {
+    padding-top: 2em;
+}
+
+.nav-btn-container ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-btn {
+    width: 7em;
+    height: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    transform-origin: left;
+    background: none;
+    color: #848BA7;
+    transition: all ease-in-out 100ms;
+}
+
+.nav-btn:hover {
+    border-bottom: 5px solid #FD4C5E;
+    color: #373B44;
+}
+
+#assignment-content {
+    display: none;
+    background-image: -webkit-linear-gradient(180deg, rgb(101, 177, 221), rgb(100, 172, 214));
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: fixed;
+    align-items: center;
+    right: 0;
+    top: 5.5em;
+    z-index: 1;
+}
+
+.nav-btn-container ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-btn-container li {
+    float: left;
+}
+
+.nav-btn-container .show-ass a,
+#ass-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#assignment-content a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+#assignment-content button {
+    width: 10em;
+    height: 2.5em;
+    background: none;
+    border: none;
+    color: aquamarine;
+    margin: 0;
+    position: relative;
+}
+
+#assignment-content a {
+    text-decoration: none;
+    display: block;
+}
+
+li.show-ass {
+    display: inline-block;
+}
+
+#assignment-content button:hover {
+    width: 10em;
+    height: 2.5em;
+    background-color: antiquewhite;
+    border: none;
+    color: rgb(94, 105, 102);
+}
+
+.show-ass:hover #assignment-content {
+    display: block;
+}
+
+.content {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 2px 25px 5px rgb(148, 145, 145);
+    margin: 2em;
+}
+
+#content {
+    margin-top: 6em;
+}
+
+.email-container {
+    width: 100%;
+    padding: 2em;
+}
+
+.input-container {
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+input {
+    height: 3em;
+}
+
+.input {
+    width: 65%;
+    border: 2px solid rgb(54, 155, 214);
+    border-radius: 5px;
+    outline: none;
+}
+
+.radio {
+    height: 1em;
+    width: 25px;
+}
+
+.select {
+    height: 25px;
+    width: 35px;
+    background: none;
+    border: 1px solid rgb(54, 155, 214);
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.multiple {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+.multiple option:hover {
+    background-color: #add5ec;
+}
+
+.file {
+    width: 33%;
+    border: none;
+}
+
+.file::-webkit-file-upload-button {
+    visibility: hidden;
+    border: none;
+}
+
+.file::before {
+    content: 'Select File';
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border-radius: 3px;
+    padding: 13px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12pt;
+    background: rgb(93, 192, 250);
+    color: antiquewhite;
+}
+
+.file:hover::before {
+    background-color: rgb(93, 192, 250);
+    color: antiquewhite;
+    border: none;
+}
+
+.file:active::before {
+    background: rgb(93, 192, 250);
+}
+
+.check {
+    height: 1.5em;
+    width: 30px;
+}
+
+.fname,
+.lname {
+    width: 32%;
+}
+
+.input:hover {
+    border: 2px solid rgb(93, 192, 250);
+}
+
+input:focus {
+    border: 2px solid rgb(93, 192, 250);
+}
+
+.send-btn {
+    width: calc(65% + 4px);
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(50, 149, 206);
+    color: aliceblue;
+    height: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 17px;
+}
+
+.send-btn:hover {
+    background-color: rgb(54, 162, 224);
+}
+
+.send-btn svg {
+    width: 25px;
+    position: relative;
+    top: 5px;
+}
+
+@media only screen and (max-width: 550px) {
+    body {
+        overflow-x: hidden;
+    }
+    .content-container {
+        width: fit-content;
+    }
+    .content {
+        width: 100%;
+        max-width: 550px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .logo-container {
+        display: none;
+    }
+    nav {
+        width: 100%;
+        position: fixed;
+        display: inline-block;
+        justify-content: center;
+    }
+    #assignment-content {
+        margin-right: 2em;
+    }
+    .nav-btn-container {
+        padding: 0;
+        padding-top: 2em;
+        margin: 0 auto;
+    }
+    .input {
+        width: 85%;
+    }
+    .radio {
+        width: 25px;
+    }
+    .fname,
+    .lname {
+        width: 42%;
+    }
+    pre {
+        font-size: 0.8em;
+    }
+}

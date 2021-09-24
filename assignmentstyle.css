@@ -1,0 +1,260 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    transition: all ease-in-out 250ms;
+}
+
+body {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    Width: 8px;
+    background: rgba(255, 255, 255, 0);
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgba(139, 139, 139, 0);
+}
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 5px;
+    background: #9b92ca;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: bolder;
+    color: rgb(100, 127, 214);
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: rgb(100, 117, 214);
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(55, 68, 78);
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(55, 68, 78);
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 1;
+}
+
+.logo-container {
+    padding-top: 25px;
+    padding-left: 25px;
+    width: fit-content;
+    height: fit-content;
+    background: none;
+}
+
+.logo-container svg {
+    width: 150px;
+    height: 300px;
+    position: relative;
+    bottom: 110px;
+}
+
+.nav-btn-container {
+    padding-top: 2em;
+}
+
+.nav-btn-container ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-btn {
+    width: 7em;
+    height: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    transform-origin: left;
+    background: none;
+    color: #848BA7;
+    transition: all ease-in-out 100ms;
+}
+
+.nav-btn:hover {
+    border-bottom: 5px solid #FD4C5E;
+    color: #373B44;
+}
+
+#assignment-content {
+    display: none;
+    background-image: -webkit-linear-gradient(180deg, rgb(101, 177, 221), rgb(100, 172, 214));
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: fixed;
+    align-items: center;
+    right: 0;
+    top: 5.5em;
+    z-index: 1;
+}
+
+.nav-btn-container ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-btn-container li {
+    float: left;
+}
+
+.nav-btn-container .show-ass a,
+#ass-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#assignment-content a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+#assignment-content button {
+    width: 10em;
+    height: 2.5em;
+    background: none;
+    border: none;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+#assignment-content a {
+    text-decoration: none;
+    display: block;
+}
+
+li.show-ass {
+    display: inline-block;
+}
+
+#assignment-content button:hover {
+    width: 10em;
+    height: 2.5em;
+    background-color: antiquewhite;
+    border: none;
+    color: rgb(94, 105, 102);
+}
+
+.assignment-content-container {
+    width: 95%;
+    height: calc(100vh - 8em);
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7em;
+    -webkit-box-shadow: 0 0 10px rgb(122, 114, 114);
+    box-shadow: 0 0 10px rgb(119, 112, 112);
+    overflow: hidden;
+}
+
+.main-assignment {
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}
+
+.assignment-content {
+    width: 67%;
+    padding: 2em;
+}
+
+.assignment-image {
+    width: 47%;
+}
+
+.assignment-image svg {
+    width: 100%;
+    fill: rgb(100, 172, 214);
+}
+
+.text-container {
+    border: 1px solid black;
+    padding-bottom: 10em;
+}
+
+.btn-contain {
+    padding: 1em;
+}
+
+#btn1 {
+    margin-top: 1em;
+    width: 200px;
+    height: 4em;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: #FD4C5E;
+}
+
+#btn1:hover {
+    background-color: #4819c8;
+}
+
+.show-ass:hover #assignment-content {
+    display: block;
+}
+
+#ass-btn1 {
+    background-color: aliceblue;
+    color: black;
+}
+
+#ass-btn1 button {
+    background-color: aliceblue;
+    color: black;
+}
+
+#ass-btn1:hover button {
+    background-color: aliceblue;
+    color: black;
+}
